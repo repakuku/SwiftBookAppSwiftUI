@@ -12,6 +12,7 @@
 		07B0E7452AB9180000E12071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B0E7442AB9180000E12071 /* Assets.xcassets */; };
 		07B0E7482AB9180000E12071 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B0E7472AB9180000E12071 /* Preview Assets.xcassets */; };
 		07B0E74F2AB918F900E12071 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0E74E2AB918F900E12071 /* Course.swift */; };
+		07B0E7562AB919A700E12071 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0E7552AB919A700E12071 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		07B0E7442AB9180000E12071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07B0E7472AB9180000E12071 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		07B0E74E2AB918F900E12071 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		07B0E7552AB919A700E12071 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +55,11 @@
 		07B0E73F2AB9180000E12071 /* SwiftBookAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				07B0E7512AB9197600E12071 /* Services */,
 				07B0E7502AB9192200E12071 /* Model */,
-				07B0E7402AB9180000E12071 /* SwiftBookAppSwiftUIApp.swift */,
-				07B0E7422AB9180000E12071 /* ContentView.swift */,
-				07B0E7442AB9180000E12071 /* Assets.xcassets */,
+				07B0E7532AB9198700E12071 /* App */,
+				07B0E7522AB9198100E12071 /* Views */,
+				07B0E7542AB9198E00E12071 /* Resources */,
 				07B0E7462AB9180000E12071 /* Preview Content */,
 			);
 			path = SwiftBookAppSwiftUI;
@@ -76,6 +79,38 @@
 				07B0E74E2AB918F900E12071 /* Course.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		07B0E7512AB9197600E12071 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				07B0E7552AB919A700E12071 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		07B0E7522AB9198100E12071 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07B0E7422AB9180000E12071 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		07B0E7532AB9198700E12071 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				07B0E7402AB9180000E12071 /* SwiftBookAppSwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		07B0E7542AB9198E00E12071 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07B0E7442AB9180000E12071 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B0E7562AB919A700E12071 /* NetworkManager.swift in Sources */,
 				07B0E74F2AB918F900E12071 /* Course.swift in Sources */,
 				07B0E7432AB9180000E12071 /* ContentView.swift in Sources */,
 				07B0E7412AB9180000E12071 /* SwiftBookAppSwiftUIApp.swift in Sources */,
