@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+final class CourseDetailsViewModel: ObservableObject {
+    let course: Course
+    
+    init(course: Course) {
+        self.course = course
+    }
+}

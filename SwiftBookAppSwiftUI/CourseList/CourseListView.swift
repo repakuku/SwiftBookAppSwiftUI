@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct CourseListView: View {
-    private let rows: [Course] = []
+    @StateObject private var viewModel = CourseListViewModel()
     
     var body: some View {
         NavigationStack {
-            
+            List($viewModel.rows, id: \.course.name) { courseDetailsViewModel in
+                
+            }
         }
     }
 }

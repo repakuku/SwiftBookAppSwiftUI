@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct CourseDetailsView: View {
+    @ObservedObject var viewModel: CourseDetailsViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(viewModel.course.name)
     }
 }
 
 #Preview {
-    CourseDetailsView()
+    CourseDetailsView(viewModel: CourseDetailsViewModel(course: Course.getCourse()))
 }
