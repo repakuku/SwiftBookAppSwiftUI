@@ -14,43 +14,13 @@ final class NetworkManager {
     
     private init() {}
     
-    func fetchData(completion: @escaping ([Course]) -> Void) {
-        guard let url = URL(string: api) else { return }
+    func fetchCourses() async throws -> [Course] {
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let courses = try decoder.decode([Course].self, from: data)
-                completion(courses)
-            } catch {
-                print(error)
-            }
-        }.resume()
+        return []
     }
     
-    func fetchImage(from url: URL?) -> Data? {
-        guard let url = url else { return nil }
-        guard let imageData = try? Data(contentsOf: url) else { return nil }
+    func fetchImage(from url: URL) throws -> Data {
         
-        return imageData
-    }
-    
-    func fetchImage(from url: URL?, completion: @escaping (Data) -> Void) {
-        guard let url else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let imageData = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            
-            completion(imageData)
-        }
+        return Data()
     }
 }
