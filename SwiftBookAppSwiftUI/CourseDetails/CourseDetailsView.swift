@@ -15,12 +15,18 @@ struct CourseDetailsView: View {
             Text(viewModel.courseName)
                 .font(.largeTitle)
             VStack(alignment: .leading, spacing: 20) {
-                CourseImageView(
-                    imageData: viewModel.imageData,
-                    imageSize: CGSize(width: 230, height: 180),
-                    cornerRadius: 30,
-                    shadowIsOn: true
-                )
+                ZStack {
+                    CourseImageView(
+                        imageData: viewModel.imageData,
+                        imageSize: CGSize(width: 230, height: 180),
+                        cornerRadius: 30,
+                        shadowIsOn: true
+                    )
+                    FavoriteButton(isFavorite: viewModel.isFavorite) {
+                        viewModel.favoriteButtonPressed()
+                    }
+                    .offset(x: 115, y: 60)
+                }
                 Text(viewModel.numberOfLessons)
                     .font(.headline)
                 Text(viewModel.numberOfTests)
@@ -33,4 +39,18 @@ struct CourseDetailsView: View {
 
 #Preview {
     CourseDetailsView(viewModel: CourseDetailsViewModel(course: Course.getCourse()))
+}
+
+struct FavoriteButton: View {
+    let isFavorite: Bool
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: "heart.fill")
+                .resizable()
+                .frame(width: 30, height: 30)
+                .foregroundStyle(isFavorite ? .red : .gray)
+        }
+    }
 }

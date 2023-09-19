@@ -12,6 +12,7 @@
 		07AE1E3E2ABA2E4900FF4609 /* CourseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE1E3D2ABA2E4900FF4609 /* CourseDetailsView.swift */; };
 		07AE1E402ABA3D8F00FF4609 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE1E3F2ABA3D8F00FF4609 /* RowView.swift */; };
 		07AE1E422ABA3DF500FF4609 /* CourseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE1E412ABA3DF500FF4609 /* CourseImageView.swift */; };
+		07AE1E442ABA4C1100FF4609 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE1E432ABA4C1100FF4609 /* StorageManager.swift */; };
 		07B0E7412AB9180000E12071 /* SwiftBookAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0E7402AB9180000E12071 /* SwiftBookAppSwiftUIApp.swift */; };
 		07B0E7432AB9180000E12071 /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0E7422AB9180000E12071 /* CourseListView.swift */; };
 		07B0E7452AB9180000E12071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B0E7442AB9180000E12071 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		07AE1E3D2ABA2E4900FF4609 /* CourseDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsView.swift; sourceTree = "<group>"; };
 		07AE1E3F2ABA3D8F00FF4609 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		07AE1E412ABA3DF500FF4609 /* CourseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseImageView.swift; sourceTree = "<group>"; };
+		07AE1E432ABA4C1100FF4609 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		07B0E73D2AB9180000E12071 /* SwiftBookAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBookAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B0E7402AB9180000E12071 /* SwiftBookAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBookAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		07B0E7422AB9180000E12071 /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				07B0E7552AB919A700E12071 /* NetworkManager.swift */,
+				07AE1E432ABA4C1100FF4609 /* StorageManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				07AE1E402ABA3D8F00FF4609 /* RowView.swift in Sources */,
 				07B0E7432AB9180000E12071 /* CourseListView.swift in Sources */,
 				07AE1E3E2ABA2E4900FF4609 /* CourseDetailsView.swift in Sources */,
+				07AE1E442ABA4C1100FF4609 /* StorageManager.swift in Sources */,
 				07AE1E3C2ABA2DD100FF4609 /* CourseDetailsViewModel.swift in Sources */,
 				07B0E7412AB9180000E12071 /* SwiftBookAppSwiftUIApp.swift in Sources */,
 			);

@@ -27,9 +27,20 @@ final class CourseDetailsViewModel: ObservableObject {
         "Number of tests: \(course.numberOfTests)"
     }
     
+    @Published var isFavorite: Bool {
+        didSet {
+            StorageManager.shared.set(isFavorite, for: course.name)
+        }
+    }
+    
     private let course: Course
     
     init(course: Course) {
         self.course = course
+        isFavorite = StorageManager.shared.getStatus(for: course.name)
+    }
+    
+    func favoriteButtonPressed() {
+        isFavorite.toggle()
     }
 }
