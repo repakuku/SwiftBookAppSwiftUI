@@ -12,13 +12,6 @@ final class CourseDetailsViewModel: ObservableObject {
         course.name
     }
     
-    var imageData: Data {
-        guard let data = try? NetworkManager.shared.fetchImageData(from: course.imageUrl) else {
-            return Data()
-        }
-        return data
-    }
-    
     var numberOfLessons: String {
         "Number of lessons: \(course.numberOfLessons)"
     }
@@ -26,6 +19,8 @@ final class CourseDetailsViewModel: ObservableObject {
     var numberOfTests: String {
         "Number of tests: \(course.numberOfTests)"
     }
+    
+    @Published var imageData: Data = Data()
     
     @Published var isFavorite: Bool {
         didSet {
@@ -42,5 +37,10 @@ final class CourseDetailsViewModel: ObservableObject {
     
     func favoriteButtonPressed() {
         isFavorite.toggle()
+    }
+    
+    func fetchImageData() async {
+        guard let imageData = try? await NetworkManager.shared.fetchImageData(from: course.imageUrl) else { return }
+        self.imageData = imageData
     }
 }
