@@ -11,7 +11,13 @@ struct CourseDetailsView: View {
     @ObservedObject var viewModel: CourseDetailsViewModel
     
     var body: some View {
-        Text(viewModel.courseName)
+        VStack {
+            CourseImageView(
+                imageData: Data(),
+                imageSize: CGSize(width: 230, height: 180),
+                shadowIsOn: true
+            )
+        }
     }
 }
 

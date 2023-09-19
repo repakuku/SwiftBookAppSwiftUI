@@ -10,6 +10,7 @@ import Foundation
 enum NetworkError: Error {
     case invalidUrl
     case decodingError
+    case noData
 }
 
 final class NetworkManager {
@@ -37,8 +38,15 @@ final class NetworkManager {
         }
     }
     
-    func fetchImage(from url: URL) throws -> Data {
+    func fetchImageData(from url: String) throws -> Data {
+        guard let url = URL(string: url) else {
+            throw NetworkError.invalidUrl
+        }
         
-        return Data()
+        do {
+            return try Data(contentsOf: url)
+        } catch {
+            throw NetworkError.noData
+        }
     }
 }

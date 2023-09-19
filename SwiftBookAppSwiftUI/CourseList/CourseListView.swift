@@ -14,9 +14,10 @@ struct CourseListView: View {
         NavigationStack {
             List(viewModel.rows, id: \.courseName) { courseDetailsViewModel in
                 NavigationLink(destination: CourseDetailsView(viewModel: courseDetailsViewModel)) {
-                    Text(courseDetailsViewModel.courseName)
+                    RowView(viewModel: courseDetailsViewModel)
                 }
             }
+            .navigationTitle("Courses")
         }
         .task {
             await viewModel.fetchCourses()
@@ -24,8 +25,6 @@ struct CourseListView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        CourseListView()
-    }
+#Preview {
+    CourseListView()
 }

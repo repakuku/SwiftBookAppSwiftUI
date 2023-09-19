@@ -12,6 +12,13 @@ final class CourseDetailsViewModel: ObservableObject {
         course.name
     }
     
+    var imageData: Data {
+        guard let data = try? NetworkManager.shared.fetchImageData(from: course.imageUrl) else {
+            return Data()
+        }
+        return data
+    }
+    
     private let course: Course
     
     init(course: Course) {
