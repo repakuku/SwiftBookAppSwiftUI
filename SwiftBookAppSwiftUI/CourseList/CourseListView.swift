@@ -7,14 +7,18 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CourseListView: View {
+    private let rows: [Course] = []
+    
     var body: some View {
-        Text("Swift")
+        NavigationStack {
+            
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CourseListView()
     }
 }
