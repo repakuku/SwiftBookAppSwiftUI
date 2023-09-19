@@ -26,13 +26,11 @@ final class NetworkManager {
         }
         
         let (data, _) = try await URLSession.shared.data(from: url)
-        
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         do {
-            let courses = try decoder.decode([Course].self, from: data)
-            return courses
+            return try decoder.decode([Course].self, from: data)
         } catch {
             throw NetworkError.decodingError
         }

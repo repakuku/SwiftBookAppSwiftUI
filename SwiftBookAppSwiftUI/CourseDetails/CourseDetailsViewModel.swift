@@ -19,6 +19,14 @@ final class CourseDetailsViewModel: ObservableObject {
         return data
     }
     
+    var numberOfLessons: String {
+        "Number of lessons: \(course.numberOfLessons)"
+    }
+    
+    var numberOfTests: String {
+        "Number of tests: \(course.numberOfTests)"
+    }
+    
     private let course: Course
     
     init(course: Course) {

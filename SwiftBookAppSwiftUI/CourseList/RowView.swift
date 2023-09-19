@@ -15,6 +15,7 @@ struct RowView: View {
             CourseImageView(
                 imageData: viewModel.imageData,
                 imageSize: CGSize(width: 130, height: 100),
+                cornerRadius: 10,
                 shadowIsOn: false
             )
             Text(viewModel.courseName)

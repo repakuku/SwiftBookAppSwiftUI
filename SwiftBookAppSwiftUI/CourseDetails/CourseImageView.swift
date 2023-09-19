@@ -10,13 +10,14 @@ import SwiftUI
 struct CourseImageView: View {
     let imageData: Data
     let imageSize: CGSize
+    let cornerRadius: CGFloat
     let shadowIsOn: Bool
     
-    #warning("TODO: corner radius")
     var body: some View {
         getImage(from: imageData)
             .resizable()
             .frame(width: imageSize.width, height: imageSize.height)
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
             .shadow(radius: shadowIsOn ? 10 : 0)
     }
     
@@ -31,6 +32,7 @@ struct CourseImageView: View {
     CourseImageView(
         imageData: Data(),
         imageSize: CGSize(width: 230, height: 180),
+        cornerRadius: 30,
         shadowIsOn: true
     )
 }
