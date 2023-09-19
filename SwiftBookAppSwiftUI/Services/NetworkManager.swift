@@ -40,4 +40,17 @@ final class NetworkManager {
         
         return imageData
     }
+    
+    func fetchImage(from url: URL?, completion: @escaping (Data) -> Void) {
+        guard let url else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let imageData = data else {
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
+            
+            completion(imageData)
+        }
+    }
 }
