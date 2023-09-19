@@ -8,7 +8,11 @@
 import Foundation
 
 final class CourseDetailsViewModel: ObservableObject {
-    let course: Course
+    var courseName: String {
+        course.name
+    }
+    
+    private let course: Course
     
     init(course: Course) {
         self.course = course

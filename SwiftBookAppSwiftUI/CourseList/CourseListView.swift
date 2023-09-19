@@ -12,8 +12,10 @@ struct CourseListView: View {
     
     var body: some View {
         NavigationStack {
-            List($viewModel.rows, id: \.course.name) { courseDetailsViewModel in
-                
+            List(viewModel.rows, id: \.courseName) { courseDetailsViewModel in
+                NavigationLink(destination: CourseDetailsView(viewModel: courseDetailsViewModel)) {
+                    Text(courseDetailsViewModel.courseName)
+                }
             }
         }
     }

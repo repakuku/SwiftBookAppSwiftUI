@@ -11,7 +11,7 @@ struct CourseDetailsView: View {
     @ObservedObject var viewModel: CourseDetailsViewModel
     
     var body: some View {
-        Text(viewModel.course.name)
+        Text(viewModel.courseName)
     }
 }
 
