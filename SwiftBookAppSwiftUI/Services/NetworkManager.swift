@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case invalidUrl
+    case decodingError
+}
+
 final class NetworkManager {
     static let shared = NetworkManager()
     
@@ -15,8 +20,21 @@ final class NetworkManager {
     private init() {}
     
     func fetchCourses() async throws -> [Course] {
+        guard let url = URL(string: api) else {
+            throw NetworkError.invalidUrl
+        }
         
-        return []
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        do {
+            let courses = try decoder.decode([Course].self, from: data)
+            return courses
+        } catch {
+            throw NetworkError.decodingError
+        }
     }
     
     func fetchImage(from url: URL) throws -> Data {

@@ -18,6 +18,9 @@ struct CourseListView: View {
                 }
             }
         }
+        .task {
+            await viewModel.fetchCourses()
+        }
     }
 }
 
