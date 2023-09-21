@@ -24,8 +24,6 @@ final class CourseDetailsViewModel: ObservableObject {
         course.imageUrl
     }
     
-    @Published var imageData: Data = Data()
-    
     @Published var isFavorite: Bool {
         didSet {
             StorageManager.shared.set(isFavorite, for: course.name)

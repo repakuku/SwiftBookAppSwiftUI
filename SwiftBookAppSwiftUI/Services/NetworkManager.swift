@@ -10,7 +10,6 @@ import Foundation
 enum NetworkError: Error {
     case invalidUrl
     case decodingError
-    case noData
 }
 
 final class NetworkManager {

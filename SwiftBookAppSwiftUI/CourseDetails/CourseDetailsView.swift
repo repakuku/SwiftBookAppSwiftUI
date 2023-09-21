@@ -22,7 +22,7 @@ struct CourseDetailsView: View {
                         cornerRadius: 30,
                         shadowIsOn: true
                     )
-                    FavoriteButton(isFavorite: viewModel.isFavorite) {
+                    FavoriteButtonView(isFavorite: viewModel.isFavorite) {
                         viewModel.favoriteButtonPressed()
                     }
                     .offset(x: 115, y: 60)
@@ -39,18 +39,4 @@ struct CourseDetailsView: View {
 
 #Preview {
     CourseDetailsView(viewModel: CourseDetailsViewModel(course: Course.getCourse()))
-}
-
-struct FavoriteButton: View {
-    let isFavorite: Bool
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            Image(systemName: "heart.fill")
-                .resizable()
-                .frame(width: 30, height: 30)
-                .foregroundStyle(isFavorite ? .red : .gray)
-        }
-    }
 }

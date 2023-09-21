@@ -11,7 +11,12 @@ final class CourseListViewModel: ObservableObject {
     @Published var rows: [CourseDetailsViewModel] = []
     
     func fetchCourses() async {
-        guard let courses = try? await NetworkManager.shared.fetchCourses() else { return }
-        rows = courses.map { CourseDetailsViewModel(course: $0) }
+        
+        do {
+            let courses = try await NetworkManager.shared.fetchCourses()
+            rows = courses.map { CourseDetailsViewModel(course: $0) }
+        } catch {
+            print(error)
+        }
     }
 }

@@ -19,6 +19,7 @@
 		07B0E7482AB9180000E12071 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B0E7472AB9180000E12071 /* Preview Assets.xcassets */; };
 		07B0E74F2AB918F900E12071 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0E74E2AB918F900E12071 /* Course.swift */; };
 		07B0E7562AB919A700E12071 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0E7552AB919A700E12071 /* NetworkManager.swift */; };
+		07E041492ABD0CD000683B43 /* FavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E041482ABD0CD000683B43 /* FavoriteButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		07B0E7472AB9180000E12071 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		07B0E74E2AB918F900E12071 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		07B0E7552AB919A700E12071 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		07E041482ABD0CD000683B43 /* FavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				07AE1E3D2ABA2E4900FF4609 /* CourseDetailsView.swift */,
 				07AE1E3B2ABA2DD100FF4609 /* CourseDetailsViewModel.swift */,
 				07AE1E412ABA3DF500FF4609 /* CourseImageView.swift */,
+				07E041482ABD0CD000683B43 /* FavoriteButtonView.swift */,
 			);
 			path = CourseDetails;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				07AE1E392ABA2C9A00FF4609 /* CourseListViewModel.swift in Sources */,
 				07AE1E422ABA3DF500FF4609 /* CourseImageView.swift in Sources */,
+				07E041492ABD0CD000683B43 /* FavoriteButtonView.swift in Sources */,
 				07B0E7562AB919A700E12071 /* NetworkManager.swift in Sources */,
 				07B0E74F2AB918F900E12071 /* Course.swift in Sources */,
 				07AE1E402ABA3D8F00FF4609 /* RowView.swift in Sources */,
