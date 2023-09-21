@@ -14,7 +14,7 @@ struct RowView: View {
         HStack {
             CourseImageView(
                 url: viewModel.imageUrl,
-                imageScale: 4,
+                imageSize: CGSize(width: 130, height: 100),
                 cornerRadius: 10,
                 shadowIsOn: false
             )

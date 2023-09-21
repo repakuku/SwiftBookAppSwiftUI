@@ -35,14 +35,4 @@ final class NetworkManager {
             throw NetworkError.decodingError
         }
     }
-    
-//    func fetchImageData(from url: String) async throws -> Data {
-//        guard let url = URL(string: url) else {
-//            throw NetworkError.invalidUrl
-//        }
-//        
-//        let (data, _) = try await URLSession.shared.data(from: url)
-//        
-//        return data
-//    }
 }

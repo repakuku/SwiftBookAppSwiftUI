@@ -18,7 +18,7 @@ struct CourseDetailsView: View {
                 ZStack {
                     CourseImageView(
                         url: viewModel.imageUrl,
-                        imageScale: 2.5,
+                        imageSize: CGSize(width: 230, height: 180),
                         cornerRadius: 30,
                         shadowIsOn: true
                     )

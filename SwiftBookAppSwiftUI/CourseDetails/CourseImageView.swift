@@ -9,12 +9,17 @@ import SwiftUI
 
 struct CourseImageView: View {
     let url: String
-    let imageScale: CGFloat
+    let imageSize: CGSize
     let cornerRadius: CGFloat
     let shadowIsOn: Bool
     
     var body: some View {
-        AsyncImage(url: URL(string: url), scale: imageScale)
+        AsyncImage(url: URL(string: url)) { image in
+            image.resizable()
+        } placeholder: {
+            ProgressView()
+        }
+            .frame(width: imageSize.width, height: imageSize.height)
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
             .shadow(radius: shadowIsOn ? 10 : 0)
     }
@@ -23,7 +28,7 @@ struct CourseImageView: View {
 #Preview {
     CourseImageView(
         url: Course.getCourse().imageUrl,
-        imageScale: 2,
+        imageSize: CGSize(width: 230, height: 180),
         cornerRadius: 30,
         shadowIsOn: true
     )
