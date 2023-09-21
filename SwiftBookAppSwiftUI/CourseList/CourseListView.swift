@@ -10,7 +10,6 @@ import SwiftUI
 struct CourseListView: View {
     @StateObject private var viewModel = CourseListViewModel()
     
-    #warning("TODO: fix image fetching")
     var body: some View {
         NavigationStack {
             List(viewModel.rows, id: \.courseName) { courseDetailsViewModel in
