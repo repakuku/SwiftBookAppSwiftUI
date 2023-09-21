@@ -20,6 +20,10 @@ final class CourseDetailsViewModel: ObservableObject {
         "Number of tests: \(course.numberOfTests)"
     }
     
+    var imageUrl: String {
+        course.imageUrl
+    }
+    
     @Published var imageData: Data = Data()
     
     @Published var isFavorite: Bool {
@@ -37,10 +41,5 @@ final class CourseDetailsViewModel: ObservableObject {
     
     func favoriteButtonPressed() {
         isFavorite.toggle()
-    }
-    
-    func fetchImageData() async {
-        guard let imageData = try? await NetworkManager.shared.fetchImageData(from: course.imageUrl) else { return }
-        self.imageData = imageData
     }
 }
