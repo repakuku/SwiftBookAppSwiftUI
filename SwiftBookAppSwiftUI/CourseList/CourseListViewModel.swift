@@ -14,7 +14,10 @@ final class CourseListViewModel: ObservableObject {
         
         do {
             let courses = try await NetworkManager.shared.fetchCourses()
-            rows = courses.map { CourseDetailsViewModel(course: $0) }
+            
+            DispatchQueue.main.async { [unowned self] in
+                self.rows = courses.map { CourseDetailsViewModel(course: $0) }
+            }
         } catch {
             print(error)
         }

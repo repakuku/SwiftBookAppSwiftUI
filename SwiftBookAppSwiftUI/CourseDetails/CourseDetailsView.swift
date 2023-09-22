@@ -14,6 +14,7 @@ struct CourseDetailsView: View {
         VStack {
             Text(viewModel.courseName)
                 .font(.largeTitle)
+                .padding([.leading, .trailing])
             VStack(alignment: .leading, spacing: 20) {
                 ZStack {
                     CourseImageView(
